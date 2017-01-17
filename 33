@@ -1,0 +1,48 @@
+package com.softserve.edu.task3;
+import java.text.DecimalFormat;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+/**
+ * Created by Natalia on 17.01.2017.
+ */
+public class triangle {
+    private String name;
+    private double a;
+    private  double b;
+    private  double c;
+    private String[] splittedString;
+
+
+    private  void  tringlevalid (String triangl )throws Exception {
+
+        String[] triangleenter = triangl.split(",");
+        if(triangleenter.length != 4){
+            System.out.println("Wrong number of arguments. " +
+                    "You must enter a name and a length of 3 sides of triangle.");
+        }
+
+        if(name.isEmpty()){
+            System.out.println("No name of the triangle!");
+        }
+        try {
+            Double a = Double.parseDouble(triangleenter[1]);
+            Double b = Double.parseDouble(triangleenter[2]);
+            Double c = Double.parseDouble(triangleenter[3]);
+        }
+        catch (NumberFormatException numbFormatExc){
+            System.out.println("Side of the triangle is not a number!");
+
+        }
+        //whether there is a triangle
+            if (a > (c + b)) {
+                System.out.println("This triangle does not exist");
+            }
+            if(b > (a+b)){
+                System.out.println("This triangle does not exist");
+            }
+            if (c > (a+b)){
+                System.out.println("This triangle does not exist");
+            }
+    }
+}
